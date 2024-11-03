@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Hadir Karyawan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="p-6 border-b border-gray-200">
+            <h2 class="text-2xl font-semibold text-gray-800">Daftar Hadir Karyawan</h2>
+        </div>
+
+        <div class="p-4 overflow-x-auto">
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <label for="entries" class="text-sm text-gray-600">Show</label>
+                    <select id="entries" class="border border-gray-300 rounded-md px-2 py-1 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option>10</option>
+                        <option>25</option>
+                        <option>50</option>
+                    </select>
+                    <span class="text-sm text-gray-600">entries</span>
+                </div>
+                <div>
+                    <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md px-4 py-1 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+
+            <table class="min-w-full bg-white border border-gray-200">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 border-b border-gray-200 text-gray-600 text-left text-sm font-semibold">#</th>
+                        <th class="px-4 py-2 border-b border-gray-200 text-gray-600 text-left text-sm font-semibold">Nama Karyawan</th>
+                        <th class="px-4 py-2 border-b border-gray-200 text-gray-600 text-left text-sm font-semibold">Tanggal</th>
+                        <th class="px-4 py-2 border-b border-gray-200 text-gray-600 text-left text-sm font-semibold">Lokasi Absen</th>
+                        <th class="px-4 py-2 border-b border-gray-200 text-gray-600 text-left text-sm font-semibold">Jam Masuk</th>
+                        <th class="px-4 py-2 border-b border-gray-200 text-gray-600 text-left text-sm font-semibold">Jam Keluar</th>
+                        <th class="px-4 py-2 border-b border-gray-200 text-gray-600 text-left text-sm font-semibold">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">1</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Alfin Rosyadi</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">2023-05-10</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Kampus Kimia</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">16:21:14</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">18:09:22</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-blue-500 cursor-pointer">👁️</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">2</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Salman Athar</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">2023-05-10</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Telkom University</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-blue-500 cursor-pointer">👁️</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">3</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Advi Zivany</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">2023-05-10</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Universitas Indonesia</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-blue-500 cursor-pointer">👁️</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">4</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Zara Adisty</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">2023-05-10</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">UNPAM Viktor</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-blue-500 cursor-pointer">👁️</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">5</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Shakira Raisya</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">2023-05-10</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">UNPAM Viktor</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-blue-500 cursor-pointer">👁️</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">6</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">Haidar Syah</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">2023-05-10</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">UNPAM Viktor</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-gray-700">10:35:02</td>
+                        <td class="px-4 py-2 border-b border-gray-200 text-sm text-blue-500 cursor-pointer">👁️</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

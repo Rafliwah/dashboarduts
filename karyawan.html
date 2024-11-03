@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Karyawan</title>
+    <link rel="stylesheet" href="karyawan.css">
+</head>
+<body>
+    <div class="container" >
+        <h2>Data Karyawan</h2>
+        <button class="add-btn" onclick="tambahKaryawan()">+ Tambah Karyawan</button>
+        <input type="text" id="search" placeholder="Search..." onkeyup="searchTable()">
+
+        <table id="dataKaryawan">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kode</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Alamat</th>
+                    <th>Jabatan</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>K001</td>
+                    <td>Brian Anfares</td>
+                    <td>briananfares@gmail.com</td>
+                    <td>Jakarta</td>
+                    <td>Staff</td>
+                    <td>
+                        <button onclick="editKaryawan()">✏️</button>
+                        <button onclick="deleteKaryawan()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>K002</td>
+                    <td>Haidar Syah</td>
+                    <td>haidarsyah@gmail.com</td>
+                    <td>Bandung</td>
+                    <td>Dosen</td>
+                    <td>
+                        <button onclick="editKaryawan()">✏️</button>
+                        <button onclick="deleteKaryawan()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>K003</td>
+                    <td>Fransiska Belinda</td>
+                    <td>fransiskabel@gmail.com</td>
+                    <td>Tangerang Selatan</td>
+                    <td>Staff</td>
+                    <td>
+                        <button onclick="editKaryawan()">✏️</button>
+                        <button onclick="deleteKaryawan()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>K004</td>
+                    <td>Rado Anando</td>
+                    <td>radoanan@gmail.com</td>
+                    <td>Bogor</td>
+                    <td>Admin Sosmed</td>
+                    <td>
+                        <button onclick="editKaryawan()">✏️</button>
+                        <button onclick="deleteKaryawan()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>K005</td>
+                    <td>Alfin Rosyadi</td>
+                    <td>alfinrsy@gmail.com</td>
+                    <td>Bogor</td>
+                    <td>Admin Sosmed</td>
+                    <td>
+                        <button onclick="editKaryawan()">✏️</button>
+                        <button onclick="deleteKaryawan()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>K006</td>
+                    <td>Salman Athar</td>
+                    <td>atharsalman@gmail.com</td>
+                    <td>Bogor</td>
+                    <td>Admin Sosmed</td>
+                    <td>
+                        <button onclick="editKaryawan()">✏️</button>
+                        <button onclick="deleteKaryawan()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>K007</td>
+                    <td>Risya Brabo</td>
+                    <td>risyaabrb@gmai.com</td>
+                    <td>BSD</td>
+                    <td>Admin Sosmed</td>
+                    <td>
+                        <button onclick="editKaryawan()">✏️</button>
+                        <button onclick="deleteKaryawan()">❌</button>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

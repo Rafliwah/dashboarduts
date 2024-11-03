@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Jabatan</title>
+  <link rel="stylesheet" href="datajabatan.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto p-6">
+    <!-- Dashboard Title -->
+    <div class="bg-blue-800 p-4 rounded-t-lg text-white font-bold text-xl">
+      Dashboard
+    </div>
+    
+    <!-- Data Jabatan Table -->
+    <div class="bg-white p-4 rounded-b-lg shadow-lg">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold">Data Jabatan</h2>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          + Tambah Jabatan
+        </button>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border">
+          <thead>
+            <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+              <th class="py-3 px-6 text-left">No</th>
+              <th class="py-3 px-6 text-left">Kode Jabatan</th>
+              <th class="py-3 px-6 text-left">Jabatan</th>
+              <th class="py-3 px-6 text-center">Aksi</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700 text-sm font-light">
+            <tr class="border-b border-gray-200 hover:bg-gray-100">
+              <td class="py-3 px-6 text-left">1</td>
+              <td class="py-3 px-6 text-left">JAB001</td>
+              <td class="py-3 px-6 text-left">Kepala Bagian</td>
+              <td class="py-3 px-6 text-center">
+                <button class="text-blue-600 hover:text-blue-800 mx-1">✏️</button>
+                <button class="text-red-600 hover:text-red-800 mx-1">❌</button>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-100">
+              <td class="py-3 px-6 text-left">2</td>
+              <td class="py-3 px-6 text-left">JAB002</td>
+              <td class="py-3 px-6 text-left">Kepala Sub Bagian</td>
+              <td class="py-3 px-6 text-center">
+                <button class="text-blue-600 hover:text-blue-800 mx-1">✏️</button>
+                <button class="text-red-600 hover:text-red-800 mx-1">❌</button>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-100">
+              <td class="py-3 px-6 text-left">3</td>
+              <td class="py-3 px-6 text-left">JAB003</td>
+              <td class="py-3 px-6 text-left">Staff</td>
+              <td class="py-3 px-6 text-center">
+                <button class="text-blue-600 hover:text-blue-800 mx-1">✏️</button>
+                <button class="text-red-600 hover:text-red-800 mx-1">❌</button>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-100">
+              <td class="py-3 px-6 text-left">4</td>
+              <td class="py-3 px-6 text-left">JAB004</td>
+              <td class="py-3 px-6 text-left">Warek I</td>
+              <td class="py-3 px-6 text-center">
+                <button class="text-blue-600 hover:text-blue-800 mx-1">✏️</button>
+                <button class="text-red-600 hover:text-red-800 mx-1">❌</button>
+              </td>
+            <tr class="border-b border-gray-200 hover:bg-gray-100">
+              <td class="py-3 px-6 text-left">5</td>
+              <td class="py-3 px-6 text-left">JAB005</td>
+              <td class="py-3 px-6 text-left">Warek II</td>
+              <td class="py-3 px-6 text-center">
+                <button class="text-blue-600 hover:text-blue-800 mx-1">✏️</button>
+                <button class="text-red-600 hover:text-red-800 mx-1">❌</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-gray-600">Showing 1 to 4 of 4 entries</p>
+        <div class="flex items-center space-x-2">
+          <button class="px-3 py-1 border rounded text-gray-600 hover:bg-gray-200">Previous</button>
+          <span class="px-3 py-1 border rounded bg-blue-600 text-white">1</span>
+          <button class="px-3 py-1 border rounded text-gray-600 hover:bg-gray-200">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

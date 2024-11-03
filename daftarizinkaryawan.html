@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Izin Karyawan</title>
+  
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <style>
+    /* Apply the Poppins font to the body */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <!-- Container -->
+  <div class="max-w-5xl mx-auto bg-white shadow-md rounded-lg p-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-semibold text-gray-800">Daftar Izin Karyawan</h1>
+      <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Ubah Status</button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-4">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        onkeyup="filterTable()"
+      />
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-200">
+        <thead>
+          <tr class="bg-gray-100 text-gray-700 text-left">
+            <th class="px-4 py-2 border">No</th>
+            <th class="px-4 py-2 border">Nama</th>
+            <th class="px-4 py-2 border">Izin</th>
+            <th class="px-4 py-2 border">Tanggal</th>
+            <th class="px-4 py-2 border">Jam</th>
+            <th class="px-4 py-2 border">Keterangan</th>
+            <th class="px-4 py-2 border">Status</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          
+          <tr class="border-t text-gray-800">
+            <td class="px-4 py-2 border">1</td>
+            <td class="px-4 py-2 border">Brian Alfares</td>
+            <td class="px-4 py-2 border">Pulang Lebih Awal</td>
+            <td class="px-4 py-2 border">2024-05-10</td>
+            <td class="px-4 py-2 border">10:35:00</td>
+            <td class="px-4 py-2 border">macet</td>
+            <td class="px-4 py-2 border">Menunggu Konfirmasi</td>
+          </tr>
+          <tr class="border-t text-gray-800">
+            <td class="px-4 py-2 border">2</td>
+            <td class="px-4 py-2 border">Haidar Syah</td>
+            <td class="px-4 py-2 border">Datang Terlambat</td>
+            <td class="px-4 py-2 border">2023-05-09</td>
+            <td class="px-4 py-2 border">11:04:00</td>
+            <td class="px-4 py-2 border">sakit</td>
+            <td class="px-4 py-2 border">Menunggu Konfirmasi</td>
+          </tr>
+          <tr class="border-t text-gray-800">
+            <td class="px-4 py-2 border">3</td>
+            <td class="px-4 py-2 border">Fransiska Belinda</td>
+            <td class="px-4 py-2 border">Pulang Lebih Awal</td>
+            <td class="px-4 py-2 border">2023-05-09</td>
+            <td class="px-4 py-2 border">11:04:00</td>
+            <td class="px-4 py-2 border">sakit</td>
+            <td class="px-4 py-2 border">Menunggu Konfirmasi</td>
+          </tr>
+          <tr class="border-t text-gray-800">
+            <td class="px-4 py-2 border">4</td>
+            <td class="px-4 py-2 border">Rado Anando</td>
+            <td class="px-4 py-2 border">Datang Terlambat</td>
+            <td class="px-4 py-2 border">2023-05-09</td>
+            <td class="px-4 py-2 border">11:04:00</td>
+            <td class="px-4 py-2 border">macet</td>
+            <td class="px-4 py-2 border">Menunggu Konfirmasi</td>
+          </tr>
+          <tr class="border-t text-gray-800">
+            <td class="px-4 py-2 border">5</td>
+            <td class="px-4 py-2 border">Salman Athar</td>
+            <td class="px-4 py-2 border">Datang Terlambat</td>
+            <td class="px-4 py-2 border">2023-05-09</td>
+            <td class="px-4 py-2 border">11:04:00</td>
+            <td class="px-4 py-2 border">Isi Bensin</td>
+            <td class="px-4 py-2 border">Menunggu Konfirmasi</td>
+          </tr>
+          <tr class="border-t text-gray-800">
+            <td class="px-4 py-2 border">6</td>
+            <td class="px-4 py-2 border">Advi Zivany</td>
+            <td class="px-4 py-2 border">Datang Terlambat</td>
+            <td class="px-4 py-2 border">2023-05-09</td>
+            <td class="px-4 py-2 border">11:04:00</td>
+            <td class="px-4 py-2 border">sakit</td>
+            <td class="px-4 py-2 border">Menunggu Konfirmasi</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript function to filter the table based on the search input
+    function filterTable() {
+      const searchInput = document.getElementById("searchInput").value.toLowerCase();
+      const tableRows = document.getElementById("tableBody").getElementsByTagName("tr");
+
+      for (let i = 0; i < tableRows.length; i++) {
+        const cells = tableRows[i].getElementsByTagName("td");
+        let found = false;
+
+        for (let j = 0; j < cells.length; j++) {
+          if (cells[j].textContent.toLowerCase().indexOf(searchInput) > -1) {
+            found = true;
+            break;
+          }
+        }
+
+        tableRows[i].style.display = found ? "" : "none";
+      }
+    }
+  </script>
+</body>
+</html>
