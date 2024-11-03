@@ -70,6 +70,8 @@ body {
 #sidebar.hide {
 	width: 60px;
 }
+
+
 #sidebar .brand {
 	font-size: 20px;
 	font-weight: 700;
@@ -79,7 +81,7 @@ body {
 	color: var(--Blue);
 	position: sticky;
 	top: ;
-	left: ;
+	left: 50%;
 	background: var(--light);
 	z-index: 500;
 	padding-bottom: 20px;
@@ -160,6 +162,12 @@ body {
 /* SIDEBAR */
 
 
+.logo {
+    width: 50px; /* Sesuaikan ukuran lebar logo */
+    height: auto; /* Biarkan proporsi tinggi otomatis */
+    margin-right: 10px; /* Jarak antara logo dan teks */
+    vertical-align: middle; /* Agar logo sejajar dengan teks */
+}
 
 
 
